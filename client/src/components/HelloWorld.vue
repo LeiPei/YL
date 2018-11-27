@@ -23,15 +23,14 @@
 
       <!--music section-->
       <v-flex xs12 class="section-position ap-bg-color">
-         <Aplayer  autoplay
+        <Aplayer
             theme="pic"
             shuffle
             repeat="list"
-            show-lrc
             :muted.sync="muted"
             :volume.sync="volume"
             :music='list3[0]'
-            :list='list3'/>
+            :list='list3'/> 
       </v-flex>
     </v-layout>
   </v-container>
@@ -47,38 +46,29 @@ export default {
   },
   data() {
     return {
+      version: '1.0',
       volume: 1,
       muted: false,
       music3: null,
       list3: [
         {
-          title: "前前前世",
-          artist: "RADWIMPS",
-          src: "http://0.0.0.0:3000/aplayer/yourname.mp3",
-          pic: "http://0.0.0.0:3000/aplayer/yourname.jpg",
-          lrc: "http://0.0.0.0:3000/aplayer/yourname.lrc"
+          title: "星球坠落",
+          artist: "艾热 李佳隆",
+          src: "http://localhost:8081/music/xqzl.mp3",
+          pic: "http://localhost:8081/musicPic/xqzl.jpg",
         },
         {
-          title: "光るなら.m3u8",
-          artist: "Goose house",
-          src: "http://0.0.0.0:3000/aplayer/hls/hikarunara.m3u8",
-          pic: "http://0.0.0.0:3000/aplayer/hikarunara.jpg",
-          lrc: "http://0.0.0.0:3000/aplayer/hikarunara.lrc"
+          title: "爱的鼓励",
+          artist: "王力宏",
+          src: "http://localhost:8081/music/aideguli.mp3",
+          pic: "http://localhost:8081/musicPic/wlh.jpg",
         },
         {
-          title: "回レ！雪月花",
-          artist: "小倉唯",
-          src: "http://0.0.0.0:3000/aplayer/snowmoonflowers.mp3",
-          pic: "http://0.0.0.0:3000/aplayer/snowmoonflowers.jpg",
-          lrc: "http://0.0.0.0:3000/aplayer/snowmoonflowers.lrc"
+          title: "最重要的决定",
+          artist: "范玮琪",
+          src: "http://localhost:8081/music/zzydjd.mp3",
+          pic: "http://localhost:8081/musicPic/fwq.jpeg",
         },
-        {
-          title: "あっちゅ～ま青春!",
-          artist: "七森中☆ごらく部",
-          src: "http://0.0.0.0:3000/aplayer/yuruyuri.mp3",
-          pic: "http://0.0.0.0:3000/aplayer/yuruyuri.jpg",
-          lrc: "http://0.0.0.0:3000/aplayer/yuruyuri.lrc"
-        }
       ]
     };
   }
