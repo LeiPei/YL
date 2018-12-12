@@ -3,7 +3,8 @@
     <!--Header-->
     <v-toolbar app color="rgba(255,255,255,.65)" height="60">
       <v-toolbar-title class="headline text-uppercase">
-        <span>yvonneleo</span>
+        <span class="home"
+              @click="navigateTo({name: 'home'})">yvonneleo</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
@@ -20,7 +21,7 @@
         >
           <span>Gallery</span>
         </v-btn>
-        <v-btn flat @click="navigateTo({name: 'Register'})">
+        <v-btn flat @click="navigateTo({name: 'map'})">
           <span>Footprint</span>
         </v-btn>
      </v-toolbar-items>
@@ -85,20 +86,20 @@ export default {
         {
           title: "星球坠落",
           artist: "艾热 李佳隆",
-          src: "https://fag7a9rxw7.execute-api.us-east-1.amazonaws.com/dev/music/xqzl.mp3",
-          pic: "https://fag7a9rxw7.execute-api.us-east-1.amazonaws.com/dev/musicPic/xqzl.jpg",
+          src: "http://backend.zrt7hfrsnw.us-west-2.elasticbeanstalk.com/music/xqzl.mp3",
+          pic: "http://backend.zrt7hfrsnw.us-west-2.elasticbeanstalk.com/musicPic/xqzl.jpg",
         },
         {
           title: "爱的鼓励",
           artist: "王力宏",
-          src: "https://fag7a9rxw7.execute-api.us-east-1.amazonaws.com/dev/music/aideguli.mp3",
-          pic: "https://fag7a9rxw7.execute-api.us-east-1.amazonaws.com/dev/musicPic/wlh.jpg",
+          src: "http://backend.zrt7hfrsnw.us-west-2.elasticbeanstalk.com/music/aideguli.mp3",
+          pic: "http://backend.zrt7hfrsnw.us-west-2.elasticbeanstalk.com/musicPic/wlh.jpg",
         },
         {
           title: "最重要的决定",
           artist: "范玮琪",
-          src: "https://fag7a9rxw7.execute-api.us-east-1.amazonaws.com/dev/music/zzydjd.mp3",
-          pic: "https://fag7a9rxw7.execute-api.us-east-1.amazonaws.com/dev/musicPic/fwq.jpeg",
+          src: "http://backend.zrt7hfrsnw.us-west-2.elasticbeanstalk.com/music/zzydjd.mp3",
+          pic: "http://backend.zrt7hfrsnw.us-west-2.elasticbeanstalk.com/musicPic/fwq.jpeg",
         },
       ]
     };
@@ -122,5 +123,13 @@ export default {
 }
 .ap-bg-color {
   background-color: #546e7a;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.home:hover {
+  color:indianred
 }
 </style>

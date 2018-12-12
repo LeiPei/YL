@@ -12,7 +12,7 @@
             class="grey lighten-2"
             height="800"
           ></v-img>
-          <v-card-title class="banner-title">The best thing to hold onto in life is each other</v-card-title>
+          <v-card-title class="banner-title pa-5">The best thing to hold onto in life is each other</v-card-title>
         </div>
       </v-flex>
 

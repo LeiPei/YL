@@ -59,7 +59,7 @@ export default {
   display: flex;
   justify-content: space-between;
   height: 300px;
-  background-color: #0277bd;
+  background-color: #d2c2b2;
 }
 
 .timeDay {

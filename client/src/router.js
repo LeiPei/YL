@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import History from './views/History.vue'
+import GoogleMap from './views/Map.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/timeline',
       name: 'timeline',
       component: History
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: GoogleMap
     },
     {
       path: '/about',
