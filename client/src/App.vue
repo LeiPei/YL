@@ -16,8 +16,7 @@
         </v-btn>
         <v-btn
           flat
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
+          @click="test()"
         >
           <span>Gallery</span>
         </v-btn>
@@ -64,6 +63,7 @@
 <script>
 import HelloWorld from "./components/HelloWorld";
 import Aplayer from "vue-aplayer";
+import authService from "@/service/authenticationService"
 
 export default {
   name: "App",
@@ -74,6 +74,9 @@ export default {
   methods: {
     navigateTo (route) {
       this.$router.push(route)
+    },
+    test () {
+      console.log(authService);
     }
   },
   data() {

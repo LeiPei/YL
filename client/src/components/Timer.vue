@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { START, convertMiliseconds } from "../Service/timeUtil.js";
+import { START, convertMiliseconds } from "../service/timeUtil.js";
 export default {
   data() {
     return {

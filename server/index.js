@@ -1,5 +1,5 @@
 const app = require('./src/app')
 
-app.listen(8081, () => {
-  console.log('listening on 8081')
+app.listen(process.env.PORT || 8081, () => {
+  console.log(`listening on ${process.env.PORT || 8081}`)
 })
