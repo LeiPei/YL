@@ -126,7 +126,10 @@ export default {
 }
 
 .home {
+  font-weight: bold;
+  font-size:30px;
   cursor: pointer;
+  font-family: "Indie Flower";
 }
 
 .home:hover {

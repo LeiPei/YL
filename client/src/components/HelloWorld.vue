@@ -48,8 +48,8 @@ export default {
   position: absolute;
   color: white;
   top: 325px;
-  font-size: 30px;
-  font-weight: 50px;
-  font-family: "Pacifico", serif;
+  font-size: 35px;
+  font-weight: 400px;
+  font-family: "Indie Flower";
 }
 </style>

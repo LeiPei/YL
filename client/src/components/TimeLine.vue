@@ -17,8 +17,8 @@
           v-text="year.year"
         ></span>
         <div class="py-3">
-          <h2 :class="`headline font-weight-light mb-3 ${year.color}--text`">{{year.title}}</h2>
-          <div>
+          <h2 :class="`customized-title font-weight-light mb-3 ${year.color}--text`">{{year.title}}</h2>
+          <div class="customized-detail">
             {{year.detail}}
           </div>
         </div>
@@ -78,7 +78,26 @@ export default {
         {
           color: 'purple',
           year: '2018-12-02',
-          title: 'First Meet with Mr Wu'
+          title: 'First Meet with Mr Wu',
+          detail: '小臭宝突然说吴叔叔要和我一起吃饭饭。This was going to be the first time I have dinner with both her mom and dad. 小臭宝选在了我公司旁边的The KEG Steak House. 我本来以为叔叔会很严肃，所以在吃饭前我的手心还在冒汗。但是后来发现叔叔原来特别和蔼，亲切。我发现我还挺喜欢和叔叔聊天的，比如时事与政治。叔叔比较喜欢喝酒，准备下次和叔叔喝上几杯。PS: 小臭宝基本上一直有牵着我的手，让我感觉心理暖暖的。也就没有那么紧张了'
+        },
+        {
+          color: 'cyan',
+          year: '2018-12-15',
+          title: 'Our The Very Fisrt...',
+          detail: '我们俩爱爱了， 细节大宝宝和小臭宝会一起完善哒'
+        },
+        {
+          color: 'green',
+          year: '2018-12-17',
+          title: 'Hair Transplant Procedure',
+          detail: '大臭宝今天在西雅图做变帅的手术，他要他的两个好基友陪，不要我陪☹️☹️☹️, 大臭宝说医生让他早上7：15到，大臭宝早上6点半就醒了，估计他的好基友给他做了爱心早餐（不是我！！！）这个大笨蛋还说了一句乌鸦嘴的话😡😡😡我开始写下这些字的时候已经是10：52了，大臭宝还没有出现给我发消息。我不知道手术时间要多长，虽然坐在办公室里，心里却挂念着大臭宝的情况，希望下一秒他就会出现给我发信息，我知道他一定会好好的🙏🙏🙏12:38 PM --- 大臭宝还没出现，网上查了下，1000根hair就要5个小时，不知道大臭宝要植多少根，疼不疼，事先也不告诉我，好让我心里有数😒😒😒'
+        },
+        {
+          color: 'pink',
+          year: '2018-12-19',
+          title: 'Our Trip is Postponed',
+          detail: '今天虽然坐在办公桌前，但是一点儿也没有心情工作。心里全部都是我的小宝宝。我对她的爱每天都在加深，This love has grown stronger and stronger. 我深深的知道自己这一次真的是伤了小宝宝的心了。马上就2019 了，我想给自己立一个flag，以后无论有什么重大决定，都要和我的小宝宝商量。我也不知道小宝宝还会不会原谅我，因为我做的一切一切其实都是为她—吴怡青。马上4点就要开会了，我也好难过，我突然想起来泰坦尼克号的电影。如果有一天我和她也遇到危难，我也会牺牲自己的生命，让小宝宝活下去。把我对她的爱深深的埋在大西洋的海底，永远永远...'
         }
       ]
     };
@@ -87,5 +106,13 @@ export default {
 </script>
 
 <style>
-
+.customized-title {
+   font-size: 26px;
+   line-height: 32px;
+   letter-spacing: normal;
+   font-family: "Indie Flower";
+}
+.customized-detail {
+  font-family: "Noto Sans SC";
+}
 </style>
