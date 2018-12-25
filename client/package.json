@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "jquery": "^3.3.1",
     "vue": "^2.5.17",
     "vue-aplayer": "^1.6.1",
     "vue-router": "^3.0.1",

@@ -20,9 +20,26 @@
         >
           <span>Gallery</span>
         </v-btn>
-        <v-btn flat @click="navigateTo({name: 'map'})">
-          <span>Footprint</span>
-        </v-btn>
+        <Register/>
+        <!--More Menu Dropdown-->
+        <div class="text-xs-center child-fill">
+          <v-menu offset-y>
+            <v-btn
+              slot="activator"
+              flat
+            >
+              More
+              <v-icon>more_vert</v-icon>
+            </v-btn>
+            <v-list>
+              <v-list-tile
+                @click="navigateTo({name: 'map'})"
+              >
+                <v-list-tile-title>Footprint</v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu>
+        </div>
      </v-toolbar-items>
      
     </v-toolbar>
@@ -61,23 +78,19 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Register from "./components/RegisterPage";
 import Aplayer from "vue-aplayer";
-import authService from "@/service/authenticationService"
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Register,
     Aplayer
   },
   methods: {
     navigateTo (route) {
       this.$router.push(route)
     },
-    test () {
-      console.log(authService);
-    }
   },
   data() {
     return {
@@ -137,5 +150,14 @@ export default {
 
 .home:hover {
   color:indianred
+}
+
+.fill {
+  height: 100%;
+}
+
+.child-fill > .v-menu--inline {
+  display: inline-block;
+  height: 100%;
 }
 </style>

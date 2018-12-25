@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import History from './views/History.vue'
 import GoogleMap from './views/Map.vue'
+import Register from './views/Register.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/map',
       name: 'map',
       component: GoogleMap
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     },
     {
       path: '/about',
