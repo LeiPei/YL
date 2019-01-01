@@ -1,7 +1,7 @@
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
-    database: process.env.DB_NAME || 'aa1w8dfmj4nv4hc',
+    database: process.env.RDS_DB_NAME || 'ebdb',
     user: process.env.RDS_USERNAME || 'lpei',
     password: process.env.RDS_PASSWORD || 'peilei920613',
     options: {
