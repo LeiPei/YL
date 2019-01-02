@@ -9,15 +9,16 @@
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Legal first name*" required></v-text-field>
+                <v-text-field label="Legal first name*" required v-model="firstName"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Legal middle name"></v-text-field>
+                <v-text-field label="Legal middle name" v-model="middleName"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
                 <v-text-field
                   label="Legal last name*"
                   required
+                  v-model="lastName"
                 ></v-text-field>
               </v-flex>
               <v-flex xs12>
@@ -61,10 +62,15 @@ export default {
       try {
         await AuthenticationService.register({
           email: this.email,
-          password: this.password
+          password: this.password,
+          firstName: this.firstName,
+          lastName: this.lastName,
+          middleName: this.middleName
         })
       } catch (error) {
         this.error = error.response.data.error
+      } finally {
+        this.dialog = false; // close the modal
       }
     }
   }

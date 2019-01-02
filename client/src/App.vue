@@ -69,7 +69,7 @@
       <v-layout>
         <v-flex xs12>
           <div id="copyright" class="hoc clear text-center"> 
-            <p>Copyright &copy; 2018 - All Rights Reserved - <a style="color: white" href="#">Yvonne-Leo</a></p>
+            <p>Copyright &copy; 2019 - All Rights Reserved - <a style="color: white" href="#">Yvonne-Leo</a></p>
           </div>
         </v-flex>
       </v-layout>
