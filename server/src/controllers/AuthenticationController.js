@@ -44,15 +44,10 @@ module.exports = {
     try {
       console.log('what is going on?')
       var users = await User.findAll({
-        attributes: ['email', 'firstName', 'lastName'],
-        raw: true
+        attributes: ['email', 'firstName', 'lastName']
       })
       console.log('wtfhaha')
-      var jsonObj = { usersabc: users }
-      console.log(jsonObj)
-      res.send({
-        users: jsonObj.toJSON()
-      })
+      res.send(users)
     } catch (err) {
       res.status(500).send({
         error: 'An error has occured, failed to retrive all users data'
