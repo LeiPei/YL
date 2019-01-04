@@ -39,5 +39,19 @@ module.exports = {
         error: 'An error has occured, failed to login'
       })
     }
+  },
+  async findAll (req, res) {
+    try {
+      const users = await User.findAll({
+        attributes: ['email', 'firstName', 'lastName']
+      })
+      res.send({
+        users: users.toJSON()
+      })
+    } catch (err) {
+      res.status(500).send({
+        error: 'An error has occured, failed to retrive all users data'
+      })
+    }
   }
 }
