@@ -42,9 +42,7 @@ module.exports = {
   },
   async findAll (req, res) {
     try {
-      const users = await User.findAll({
-        attributes: ['email', 'firstName', 'lastName']
-      })
+      var users = await User.findAll()
       console.log(users)
       var jsonObj = { users: users }
       res.send({
