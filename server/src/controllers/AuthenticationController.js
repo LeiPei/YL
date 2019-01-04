@@ -43,7 +43,10 @@ module.exports = {
   async findAll (req, res) {
     try {
       console.log('what is going on?')
-      var users = await User.findAll({ attributes: ['email', 'firstName', 'lastName'] })
+      var users = await User.findAll({
+        attributes: ['email', 'firstName', 'lastName'],
+        raw: true
+      })
       console.log('wtfhaha')
       var jsonObj = { usersabc: users }
       console.log(jsonObj)
