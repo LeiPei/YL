@@ -45,6 +45,7 @@ module.exports = {
       const users = await User.findAll({
         attributes: ['email', 'firstName', 'lastName']
       })
+      console.log(users)
       var jsonObj = { users: users }
       res.send({
         users: jsonObj.toJSON()
