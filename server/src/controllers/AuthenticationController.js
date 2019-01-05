@@ -42,15 +42,28 @@ module.exports = {
   },
   async findAll (req, res) {
     try {
-      console.log('what is going on?')
       var users = await User.findAll({
         attributes: ['email', 'firstName', 'lastName']
       })
-      console.log('wtfhaha')
       res.send(users)
     } catch (err) {
       res.status(500).send({
         error: 'An error has occured, failed to retrive all users data'
+      })
+    }
+  },
+  async deleteAll (req, res) {
+    try {
+      await User.destroy({
+        where: {},
+        truncate: true
+      })
+      return res.json({
+        message: 'All records from user table has been deleted!'
+      })
+    } catch (err) {
+      res.status(500).send({
+        error: 'An error has occured, failed to delete all users data'
       })
     }
   }
