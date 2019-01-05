@@ -6,6 +6,7 @@ module.exports = (app) => {
   app.get('/musicPic/:name', FilesController.readPicture)
   // authentication
   app.post('/register', AuthenticationController.register)
+  app.post('/login', AuthenticationController.login)
   app.get('/allUsers', AuthenticationController.findAll)
   app.delete('/allUsers', AuthenticationController.deleteAll)
   app.get('/test', (req, res) => {
