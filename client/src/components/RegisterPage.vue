@@ -30,6 +30,7 @@
             </v-layout>
           </v-container>
           <small>*indicates required field</small>
+          <div class="err" v-html="error"></div>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -48,6 +49,9 @@ export default {
       dialog: false,
       email: '',
       password: '',
+      firstName: '',
+      lastName: '',
+      middleName: '',
       error: null
     }
   },
@@ -67,10 +71,11 @@ export default {
           lastName: this.lastName,
           middleName: this.middleName
         })
+        this.dialog = false; // close the modal
       } catch (error) {
         this.error = error.response.data.error
       } finally {
-        this.dialog = false; // close the modal
+        //
       }
     }
   }

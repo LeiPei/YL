@@ -21,6 +21,7 @@
           <span>Gallery</span>
         </v-btn>
         <Register/>
+        <Login/>
         <!--More Menu Dropdown-->
         <div class="text-xs-center child-fill">
           <v-menu offset-y>
@@ -79,12 +80,14 @@
 
 <script>
 import Register from "./components/RegisterPage";
+import Login from "./components/LoginPage";
 import Aplayer from "vue-aplayer";
 
 export default {
   name: "App",
   components: {
     Register,
+    Login,
     Aplayer
   },
   methods: {
