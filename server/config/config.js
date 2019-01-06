@@ -9,5 +9,8 @@ module.exports = {
       host: process.env.RDS_HOSTNAME || 'localhost',
       port: process.env.RDS_PORT || 3306
     }
+  },
+  authentication: {
+    jwtSecret: process.env.JWT_SECRET || 'secret'
   }
 }
