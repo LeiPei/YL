@@ -29,6 +29,7 @@
 
 <script>
 import AuthenticationService from '@/service/authenticationService'
+import observerService from '@/service/observerService'
 export default {
   data: function () {
     return {
@@ -48,17 +49,22 @@ export default {
   },
   mounted: function() {
     let $btn = $('.v-dialog__activator') //eslint-disable-line
+    let $container = $('.v-dialog__container') //eslint-disable-line
     if($btn.length > 0) {
       $btn.addClass('fill');
+    }
+    if($container.length > 0) {
+      $container.addClass('fill');
     }
   },
   methods: {
     async login () {
       try {
-        await AuthenticationService.login({
+        const user = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
+        observerService.notify('AUTHCHANGE', user.data)
         this.dialog = false; // close the modal... success!
       } catch (error) {
         this.error = error.response.data.error // show error

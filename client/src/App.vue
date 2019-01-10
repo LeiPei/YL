@@ -9,19 +9,23 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn
+          v-if="userData"
           flat
           @click="navigateTo({name: 'timeline'})"
         >
           <span>Story</span>
         </v-btn>
         <v-btn
+          v-if="userData"
           flat
           @click="test()"
         >
           <span>Gallery</span>
         </v-btn>
         <Register/>
-        <Login/>
+        <div  v-if="!userData">
+          <Login/>
+        </div>
         <!--More Menu Dropdown-->
         <div class="text-xs-center child-fill">
           <v-menu offset-y>
@@ -40,6 +44,12 @@
               </v-list-tile>
             </v-list>
           </v-menu>
+        </div>
+        <div v-if="userData" class="text-xs-center">
+          <v-chip>
+            <v-avatar class="teal">{{ userData.user.firstName[0].toUpperCase() }}</v-avatar>
+            Hello {{ userData.user.firstName }}
+          </v-chip>
         </div>
      </v-toolbar-items>
      
@@ -82,6 +92,7 @@
 import Register from "./components/RegisterPage";
 import Login from "./components/LoginPage";
 import Aplayer from "vue-aplayer";
+import observerService from '@/service/observerService'
 
 export default {
   name: "App",
@@ -95,8 +106,16 @@ export default {
       this.$router.push(route)
     },
   },
+  mounted() {
+    let vueInstance = this
+    observerService.registerObserver('AUTHCHANGE', function(data) {
+      console.log(data)
+      vueInstance.userData = data;
+    })
+  },
   data() {
     return {
+      userData: null,
       version: '1.0',
       volume: 1,
       muted: false,
@@ -162,5 +181,10 @@ export default {
 .child-fill > .v-menu--inline {
   display: inline-block;
   height: 100%;
+}
+
+.theme--light .v-chip {
+  background: none;
+  margin-top: 12px;
 }
 </style>
