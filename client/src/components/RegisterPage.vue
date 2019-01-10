@@ -56,7 +56,7 @@ export default {
     }
   },
   mounted: function() {
-    let $btn = $('.v-dialog__activator')
+    let $btn = $('.v-dialog__activator') //eslint-disable-line
     if($btn.length > 0) {
       $btn.addClass('fill');
     }
