@@ -22,7 +22,7 @@
         >
           <span>Gallery</span>
         </v-btn>
-        <Register/>
+        <!-- <Register/> -->
         <div  v-if="!userData">
           <Login/>
         </div>
@@ -89,7 +89,6 @@
 </template>
 
 <script>
-import Register from "./components/RegisterPage";
 import Login from "./components/LoginPage";
 import Aplayer from "vue-aplayer";
 import observerService from '@/service/observerService'
@@ -97,7 +96,6 @@ import observerService from '@/service/observerService'
 export default {
   name: "App",
   components: {
-    Register,
     Login,
     Aplayer
   },
