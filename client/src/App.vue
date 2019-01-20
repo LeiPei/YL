@@ -107,7 +107,6 @@ export default {
   mounted() {
     let vueInstance = this
     observerService.registerObserver('AUTHCHANGE', function(data) {
-      console.log(data)
       vueInstance.userData = data;
     })
   },
